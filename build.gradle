@@ -1,0 +1,30 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.3'
+	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+	id 'java'
+}
+
+group = 'com.stereo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.apache.ignite:ignite-core:2.13.0'
+	implementation 'org.apache.ignite:ignite-slf4j:2.12.0'
+	implementation 'org.slf4j:slf4j-simple:2.0.0-alpha7'
+	implementation 'org.umlg:sqlg-mysql-dialect:2.0.0'
+	implementation 'com.mchange:c3p0:0.9.2.1'
+	implementation 'org.apache.ignite:ignite-indexing:2.13.0'
+	implementation 'com.h2database:h2:1.4.197'
+	implementation 'org.apache.ignite:ignite-spring-data:2.7.5'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
